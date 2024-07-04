@@ -1,0 +1,165 @@
+//variables
+
+//fonts
+$f-primary: 'Poppins', sans-serif;
+$f-secondary: 'Roboto', sans-serif;
+
+// colors
+$c-primary: #5375d9;
+$c-primary-hover: #4d6bc5;
+$c-primary-subtle: #eaf0ff;
+$c-secondary: #ff6433;
+$c-secondary-subtle: #febb94;
+$c-black: #222222;
+$c-body-text: #4a4a4a;
+$c-body-bg: #ffffff;
+$c-white: #ffffff;
+
+// breakpoints
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+// general styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $f-primary;
+  background: $c-body-bg;
+  color: $c-body-text;
+  line-height: 1.7;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $c-black;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $c-black;
+}
+
+.h1 {
+  font-size: 57px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.h2 {
+  font-size: 48px;
+  line-height: 1.4;
+  letter-spacing: -2%;
+}
+
+.h3 {
+  font-size: 32px;
+  line-height: 1.4;
+  letter-spacing: -2%;
+}
+
+.h4 {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.btn {
+  text-transform: uppercase;
+  border: none;
+  background: $c-primary;
+  color: $c-white;
+  border-radius: 30px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  min-width: 140px;
+  transition: all 0.3 ease-in-out;
+  font-size: 14px;
+  &:hover {
+    background-color: $c-primary-hover;
+  }
+  &--lg {
+    height: 56px;
+    padding: 0 2rem;
+  }
+  &--sm {
+    height: 48px;
+    padding: 0 1.5rem;
+  }
+}
+
+.input,
+.textarea {
+  border: none;
+  outline: none;
+  border-bottom: 2pxc solid #bcbcbc;
+  font-family: $c-secondary;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: $c-black;
+  &::placeholder {
+    color: #909090;
+  }
+  &:focus {
+    border-bottom: 2pxc solid $c-primary;
+  }
+}
+
+.input {
+  height: 48px;
+}
+
+.textarea {
+  min-height: 200px;
+  resize: none;
+}

@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #222222;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222222;
+}
+
+.h1 {
+  font-size: 57px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.h2 {
+  font-size: 48px;
+  line-height: 1.4;
+  letter-spacing: -2%;
+}
+
+.h3 {
+  font-size: 32px;
+  line-height: 1.4;
+  letter-spacing: -2%;
+}
+
+.h4 {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.btn {
+  text-transform: uppercase;
+  border: none;
+  background: #5375d9;
+  color: #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  min-width: 140px;
+  transition: all 0.3 ease-in-out;
+  font-size: 14px;
+}
+.btn:hover {
+  background-color: #4d6bc5;
+}
+.btn--lg {
+  height: 56px;
+  padding: 0 2rem;
+}
+.btn--sm {
+  height: 48px;
+  padding: 0 1.5rem;
+}
+
+.input,
+.textarea {
+  border: none;
+  outline: none;
+  border-bottom: 2pxc solid #bcbcbc;
+  font-family: #ff6433;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #222222;
+}
+.input::-moz-placeholder, .textarea::-moz-placeholder {
+  color: #909090;
+}
+.input::placeholder,
+.textarea::placeholder {
+  color: #909090;
+}
+.input:focus,
+.textarea:focus {
+  border-bottom: 2pxc solid #5375d9;
+}
+
+.input {
+  height: 48px;
+}
+
+.textarea {
+  min-height: 200px;
+  resize: none;
+}/*# sourceMappingURL=style.css.map */
