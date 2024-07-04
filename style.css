@@ -129,4 +129,116 @@ h6 {
 .textarea {
   min-height: 200px;
   resize: none;
+}
+
+.banner {
+  min-height: 95vh;
+  padding: 10rem 0 6rem 0;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  background-image: url("./assets/banner/bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner__container {
+  height: 76vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .banner__container {
+    flex-direction: row;
+  }
+}
+.banner__text, .banner__image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .banner__text, .banner__image {
+    text-align: left;
+  }
+}
+.banner__text {
+  align-items: start;
+  gap: 30px;
+}
+.banner__image {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .banner__image {
+    display: flex;
+  }
+}
+.banner__image img {
+  width: 100%;
+  max-width: 600px;
+}
+.banner__pretitle {
+  background: #febb94;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .banner__pretitle {
+    margin: 0;
+  }
+}
+.banner__title {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.banner__title span {
+  color: #5375d9;
+}
+.banner__subtitle {
+  max-width: 540px;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .banner__subtitle {
+    margin: 0;
+  }
+}
+.banner__btn {
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .banner__btn {
+    margin: 0;
+  }
+}
+
+.brands__title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.brands__img-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .brands__img-wrapper {
+    justify-content: space-between;
+  }
+}
+.brands__img {
+  max-height: 80px;
+}
+@media (min-width: 1200px) {
+  .brands__img {
+    max-height: none;
+  }
 }/*# sourceMappingURL=style.css.map */
