@@ -23,9 +23,49 @@
     <link rel="stylesheet" href="./style.css" />
     <script defer src="script.js"></script>
   </head>
-  <body>
+  <body class="resize-animation-stopper">
     <!-- start header -->
-    <header>header</header>
+    <header class="header" id="header">
+      <div class="header__container">
+        <a href="">
+          <img src="assets/logo.svg" alt="" />
+        </a>
+
+        <!-- nav trigger btn -->
+        <div class="nav-trigger" id="navTrigger">
+          <i class="ri-menu-line"></i>
+        </div>
+        <!-- nav -->
+        <nav class="nav" id="nav">
+          <div class="nav__close-btn" id="navCloseBtn">
+            <i class="ri-close-large-line"></i>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Benefits</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Testimonials</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">FAQ</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- btn -->
+        <button class="btn btn-primary btn--sm">Get Started</button>
+      </div>
+    </header>
     <!-- end header -->
 
     <!-- start banner -->
@@ -122,5 +162,8 @@
     <!-- start footer -->
     <section class="footer">footer</section>
     <!-- end footer  -->
+
+    <!-- temporary div -->
+    <div style="height: 4000px"></div>
   </body>
 </html>

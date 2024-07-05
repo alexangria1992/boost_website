@@ -22,6 +22,11 @@ $c-white: #ffffff;
       @content;
     }
   }
+  @if $breakpoint == mobile-tablet {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  }
 
   @if $breakpoint == laptop {
     @media (min-width: 992px) {
@@ -36,7 +41,7 @@ $c-white: #ffffff;
   }
 
   @if $breakpoint == mobile {
-    @media (max-width: 716px) {
+    @media (max-width: 767px) {
       @content;
     }
   }
@@ -175,12 +180,16 @@ h6 {
   resize: none;
 }
 
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
 //  banner styles
 
 .banner {
   min-height: 95vh;
   padding: 10rem 0 6rem 0;
-  border: 1px solid green;
+  // border: 1px solid green;
   display: flex;
   flex-direction: column;
   gap: 70px;
@@ -192,7 +201,7 @@ h6 {
     height: 76vh;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
+    // border: 1px solid red;
     justify-content: center;
     @include breakpoint(tablet) {
       flex-direction: row;
@@ -261,6 +270,7 @@ h6 {
   }
 }
 
+// BRANDS
 .brands {
   &__container {
     @include breakpoint(mobile) {
@@ -289,5 +299,114 @@ h6 {
     @include breakpoint(desktop) {
       max-height: none;
     }
+  }
+}
+
+// HEADER
+
+.header {
+  position: fixed;
+  // border: 1px solid red;
+  width: 100%;
+  z-index: 4;
+  height: 90px;
+  // background-color: palegoldenrod;
+  transition: all 0.3s ease-in-out;
+  &__container {
+    // border: 1px solid green;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+  .btn {
+    display: none;
+    @include breakpoint(desktop) {
+      display: block;
+    }
+  }
+  &.is-active {
+    background: $c-white;
+    box-shadow: 0 1px 8px 4px rgba(83, 117, 217, 0.1);
+    transition: all 0.3s ease-in-out;
+    height: 80px;
+  }
+}
+
+.nav {
+  background: $c-black;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  width: 70vw;
+  z-index: 5;
+
+  @include breakpoint(mobile-tablet) {
+    width: 40vw;
+    transition: all 0.5s ease-in-out;
+  }
+
+  @include breakpoint(desktop) {
+    position: relative;
+    right: 0;
+    background: none;
+  }
+  &__close-btn {
+    width: 40px;
+    height: 40px;
+    color: $c-primary;
+    // background: pink;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
+  &.is-open {
+    right: 0;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    // border: 1px solid red;
+    gap: 2rem;
+    @include breakpoint(desktop) {
+      flex-direction: row;
+    }
+  }
+  &__link {
+    color: $c-white;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+    &:hover {
+      color: $c-primary;
+    }
+    @include breakpoint(desktop) {
+      color: $c-black;
+      font-size: 1rem;
+    }
+  }
+}
+
+// nav trigger
+.nav-trigger {
+  cursor: pointer;
+  font-size: 2.4rem;
+  color: $c-black;
+  @include breakpoint(desktop) {
+    display: none;
   }
 }

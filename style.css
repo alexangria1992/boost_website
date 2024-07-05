@@ -131,10 +131,14 @@ h6 {
   resize: none;
 }
 
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
 .banner {
   min-height: 95vh;
   padding: 10rem 0 6rem 0;
-  border: 1px solid green;
   display: flex;
   flex-direction: column;
   gap: 70px;
@@ -146,7 +150,6 @@ h6 {
   height: 76vh;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   justify-content: center;
 }
 @media (min-width: 768px) {
@@ -224,7 +227,7 @@ h6 {
   }
 }
 
-@media (max-width: 716px) {
+@media (max-width: 767px) {
   .brands__container {
     margin-top: 35px;
   }
@@ -255,5 +258,118 @@ h6 {
 @media (min-width: 1200px) {
   .brands__img {
     max-height: none;
+  }
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  height: 90px;
+  transition: all 0.3s ease-in-out;
+}
+.header__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.header .btn {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .header .btn {
+    display: block;
+  }
+}
+.header.is-active {
+  background: #ffffff;
+  box-shadow: 0 1px 8px 4px rgba(83, 117, 217, 0.1);
+  transition: all 0.3s ease-in-out;
+  height: 80px;
+}
+
+.nav {
+  background: #222222;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  width: 70vw;
+  z-index: 5;
+}
+@media (max-width: 1199px) {
+  .nav {
+    width: 40vw;
+    transition: all 0.5s ease-in-out;
+  }
+}
+@media (min-width: 1200px) {
+  .nav {
+    position: relative;
+    right: 0;
+    background: none;
+  }
+}
+.nav__close-btn {
+  width: 40px;
+  height: 40px;
+  color: #5375d9;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  left: 20px;
+}
+@media (min-width: 1200px) {
+  .nav__close-btn {
+    display: none;
+  }
+}
+.nav.is-open {
+  right: 0;
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 2rem;
+}
+@media (min-width: 1200px) {
+  .nav__list {
+    flex-direction: row;
+  }
+}
+.nav__link {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.2rem;
+}
+.nav__link:hover {
+  color: #5375d9;
+}
+@media (min-width: 1200px) {
+  .nav__link {
+    color: #222222;
+    font-size: 1rem;
+  }
+}
+
+.nav-trigger {
+  cursor: pointer;
+  font-size: 2.4rem;
+  color: #222222;
+}
+@media (min-width: 1200px) {
+  .nav-trigger {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
