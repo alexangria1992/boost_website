@@ -498,4 +498,52 @@ h6 {
 
 .swiper-pagination-bullet {
   background: #222222;
+}
+
+.services__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 30px;
+}
+@media (min-width: 800px) {
+  .services__container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 940px) {
+  .services__container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1200px) {
+  .services__container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.services__item {
+  background: #eaf0ff;
+  flex: 1;
+  height: auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease-in-out;
+}
+.services__item:hover {
+  background: #febb94;
+}
+@media (min-width: 940px) {
+  .services__item {
+    min-height: 390px;
+  }
+}
+.services__item-icon {
+  font-size: 3.4rem;
+  line-height: normal;
+  color: #222222;
 }/*# sourceMappingURL=style.css.map */
