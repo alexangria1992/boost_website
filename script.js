@@ -69,3 +69,18 @@ const swiper = new Swiper('.swiper', {
     },
   },
 });
+
+//faq
+const faqItems = document.querySelectorAll('.faq__item');
+// console.log(faqItems);
+
+faqItems.forEach((item) => {
+  // console.log(item);
+  item.addEventListener('click', () => {
+    // console.log('item');
+    const isOpen = item.classList.toggle('is-open');
+    const iconClass = isOpen ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line';
+    const iconElement = item.querySelector('i');
+    iconElement.classList = `${iconClass}`;
+  });
+});
