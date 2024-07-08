@@ -156,19 +156,25 @@ h6 {
 .textarea {
   border: none;
   outline: none;
-  border-bottom: 2pxc solid #bcbcbc;
-  font-family: $c-secondary;
+  border-bottom: 2px solid #bcbcbc;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 500;
-  color: $c-black;
-  &::placeholder {
-    color: #909090;
-  }
-  &:focus {
-    border-bottom: 2pxc solid $c-primary;
-  }
+  color: #222222;
+}
+.input::-moz-placeholder,
+.textarea::-moz-placeholder {
+  color: #909090;
+}
+.input::placeholder,
+.textarea::placeholder {
+  color: #909090;
+}
+.input:focus,
+.textarea:focus {
+  border-bottom: 2px solid #5375d9;
 }
 
 .input {
@@ -643,6 +649,58 @@ h6 {
         height: auto;
         padding: 20px 20px 0 30px;
       }
+    }
+  }
+}
+
+//contact styles
+.contact {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    @include breakpoint(desktop) {
+      flex-direction: row;
+    }
+  }
+  &__img,
+  &__form-wrapper {
+    flex: 1;
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    @include breakpoint(desktop) {
+      order: 1;
+    }
+  }
+  &__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    padding: 0 30px;
+    // border: 1px solid green;
+    width: 100%;
+    @include breakpoint(desktop) {
+      text-align: left;
+      padding: 0;
+    }
+  }
+  &__form-subtitle {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @include breakpoint(tablet) {
+    &__btn {
+      max-width: 200px;
     }
   }
 }
